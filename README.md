@@ -1,4 +1,4 @@
-# macos-ui-clone
+# macOS UI Clone
 🗺️ A simple macOS Big Sur UI clone with "functional apps"
 
 ## Como acessar? 👇
