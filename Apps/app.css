@@ -1,0 +1,50 @@
+:root {
+    --close-color: #f04747;
+    --open-color: #34b911;
+    --max-color: #f4bc11;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#topbar {
+    width: 100%;
+    height: 45px;
+    background-image: linear-gradient(180deg, #ffffff, #d6d6d6);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: solid #9b9b9b 3px;
+}
+#container_menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+#elippse {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    /* background-color: black; */
+}
+
+#elippse + #elippse {
+    margin-left: 7px;
+}
+
+.red {
+    background-color: var(--close-color);
+}
+
+.yellow {
+    background-color: var(--max-color)
+}
+
+.green {
+    background-color: var(--open-color)
+}

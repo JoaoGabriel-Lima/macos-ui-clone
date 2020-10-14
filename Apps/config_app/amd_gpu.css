@@ -1,0 +1,214 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    background-image: url('../../img/Wallpapers/wallpapers.jpg');
+    background-size: 100%;
+}
+
+#top_menu {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(95, 95, 95, 0.377);
+    backdrop-filter: blur(300px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1;
+    animation: 0.4s ease-out 0s 1 teste;
+    z-index: 50;
+}
+
+@keyframes teste {
+    0% {
+        margin-bottom: 100px;
+        opacity: -0.3;
+        backdrop-filter: blur(0px);
+    }
+    100% {
+        padding-bottom: 0;
+        opacity: 1;
+        backdrop-filter: blur(300px);
+    }
+}
+
+#bottom_container {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+#config {
+    /* width: 573px; */
+    margin: 0;
+    /* position: absolute !important; */
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    animation: 0.2s ease-out 0s 1 openconfig;
+
+}
+@keyframes openconfig {
+    0% {
+        opacity: 0;
+        height: 255px;
+        width: 297.5px;
+    }
+    100% {
+        opacity: 1;
+        height: 510px;
+        width: 595px;
+    }
+}
+#apps-container {
+    width: 99%;
+    height: 90%;
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#configimg {
+    height: 510px;
+    z-index: 2;
+    -webkit-filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    animation: 0.4s ease-out 0s 1 openconfig;
+}
+
+#bottom_menu {
+    /* width: 80%; */
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 65px;
+    border-radius: 15px;
+    background-color: rgba(182, 182, 182, 0.377);
+    /* background-color: rgba(225, 225, 225, 0.377); */
+    backdrop-filter: blur(300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-out 0.2s;
+    z-index: 300;
+    /* animation: 0.4s ease-out 0s 1 open; */
+}
+
+@keyframes open {
+    0% {
+        width: 10%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+.apple_top_logo {
+    height: 19px;
+    padding-top: 2px;
+}
+
+#nav_bar {
+    padding: 0;
+    padding-left: 28px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#right_menu {
+    display: flex;
+    /* width: 300px; */
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 28px;
+}
+.nav_icon {
+    color: white;
+    margin-right: 24px;
+    font-size: 13px;
+}
+#nav_bar li a {
+    text-decoration: none;
+    font-family: "Roboto";
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 13.5px;
+    padding-top: 200px !important;
+}
+
+#time {
+    font-family: "Roboto";
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 13.5px;
+    
+}
+
+#nav_bar li {
+    list-style: none;
+}
+
+.top_txt_container+ .top_txt_container {
+    margin-left: 25px;
+} 
+
+.icons_box {
+    display: flex;
+    justify-content: center;
+    transition: ease-out 0.2s;
+    align-items: center;
+}
+.icons {
+    height: 60px;
+    transition: ease-out 0.2s;
+    z-index: 300;
+}
+
+.icons:active {
+    animation: 0.2s ease-out 0s 1 openapp;
+}
+@keyframes openapp {
+    0% {
+        height: 85px;
+    }
+    50% {
+        height: 95px;
+    }
+    100% {
+        height: 85px;
+    }
+}
+
+/* .icons:hover {
+    height: 85px;
+    padding-bottom: 25px;
+    cursor: pointer;
+}
+.icons:hover + .icons:nth-child(n+1) {
+    height: 75px;
+    padding-bottom: 15px;
+} */
+/* .icons:last-child {
+    order: -1;
+} */
+.principal {
+    height: 85px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.secundary {
+    height: 75px;
+    padding-bottom: 15px;
+}

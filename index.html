@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook Pro</title>
+    <link rel="stylesheet" href="amd_gpu.css">
+    <link rel="stylesheet" href="apps.css">
+    <script src="startup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/9aa42960d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="icon" href="img/apple-logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+</head>
+    <body>
+        <div id="top_menu">
+            <nav>
+                <ul id="nav_bar">
+                    <li class="top_txt_container"><a href=""><img class="apple_top_logo" src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg"></a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">Finder</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">File</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">Edit</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">View</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">Go</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">Window</a></li>
+                    <li class="top_txt_container"><a href="" class="top_bar_txt">Help</a></li>
+                </ul>
+            </nav>
+            <div id="right_menu">
+                
+                <i class="far fa-paper-plane nav_icon"></i>
+                <i class="fas fa-wifi nav_icon"></i>
+                <i class="fas fa-volume-up nav_icon"></i>
+                <i class="fas fa-search nav_icon"></i>
+                <i class="fas fa-sliders-h nav_icon"></i>
+                <h3 id="time">Qua 23 Set 15:42</h3>
+            </div>
+        </div>
+
+        <div id="bottom_container">
+            <div id="apps-container">
+
+            </div>
+            <div id="bottom_menu">
+                <div class="icons_box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Finder_Icon_2020.png" alt="" class="icons">
+                    <img src="/img/icons/launchpad.png" alt="" class="icons">
+                    <img src="/img/icons/safari.png" alt="" class="icons">
+                    <img src="/img/icons/messages.png" alt="" class="icons">
+                    <img src="/img/icons/mail.png" alt="" class="icons">
+                    <img src="/img/icons/maps.png" alt="" class="icons">
+                    <img src="/img/icons/photos.png" alt="" class="icons">
+                    <img src="/img/icons/facetime.png" id="ok" alt="" class="icons">
+                    <img src="/img/icons/calendar.png" alt="" class="icons">
+                    <img src="/img/icons/contacts.png" alt="" class="icons">
+                    <img src="/img/icons/reminders.png" alt="" class="icons">
+                    <img src="/img/icons/notes.png" alt="" class="icons">
+                    <img src="/img/icons/tv.png" alt="" class="icons">
+                    <img src="/img/icons/music.png" alt="" class="icons">
+                    <img src="/img/icons/podcasts.png" alt="" class="icons">
+                    <img src="/img/icons/news.png" alt="" class="icons">
+                    <img src="/img/icons/siri.png" alt="" class="icons">
+                    <img src="/img/icons/appstore.png" alt="" onclick="openApp('store')" class="icons">
+                    <img src="/img/icons/findmy.png" alt="" onclick="openApp('findmy')" class="icons">
+                    <img src="/img/icons/systempreferences.png" alt="" id="configapp" onclick="openApp('config')" class="icons">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    
+
+    var intervalID = window.setInterval(myCallback, 5000);
+
+    function myCallback() {
+        var d = new Date(); // for now
+        let hora = d.getHours(); // => 9
+        let minuto = d.getMinutes(); // =>  30
+        let dia = d.getDate()
+        let week = d.getDay()
+        let mes_num = d.getMonth()
+        let semana = "";
+        let mes = "";
+
+
+        switch (week) {
+            case 1:
+                semana = "Seg"
+                break
+            case 2:
+                semana = "Ter"
+                break
+            case 3:
+                semana = "Qua"
+                break
+            case 4:
+                semana = "Qui"
+                break
+            case 5:
+                semana = "Sex"
+                break
+            case 6:
+                semana = "Sab"
+                break
+            case 0:
+                semana = "Dom"
+                break
+        }
+        switch (mes_num) {
+            case 1:
+                mes = "Jan"
+                break;
+            case 2:
+                mes = "Fev"
+                break;
+            case 3:
+                mes = "Mar"
+                break;
+            case 4:
+                mes = "Abr"
+                break;
+            case 5:
+                mes = "Mai"
+                break;
+            case 6:
+                mes = "Jun"
+                break;
+            case 7:
+                mes = "Jul"
+                break;
+            case 8:
+                mes = "Ago"
+                break;
+            case 9:
+                mes = "Set"
+                break;
+            case 10:
+                mes = "Out"
+                break;
+            case 11:
+                mes = "Nov"
+                break;
+            case 12:
+                mes = "Dez"
+                break;
+        }
+        document.getElementById('time').innerHTML = `${semana} ${dia} ${mes} ${hora}:${minuto}`
+    }
+    
+    window.onload = function() {
+        // document.documentElement.requestFullscreen();
+        myCallback()
+    };
+
+    $("#bottom_container").selectable();
+    $( ".icons" ).draggable({
+        delay: 400,
+        appendTo: "#bottom_container"
+    });
+
+</script>
+
+<!-- <script src="plugin.js"></script> -->
+<script>
+    var intervalID2 = window.setInterval(myCallback2, 200);
+    var intervalID3 = window.setInterval(focus, 20);
+    function myCallback2() {
+        // var draggable_icon = $("img[class*='ui-draggable-dragging']")
+        $("img[class*='icons ui-selectee ui-draggable ui-draggable-dragging']").addClass("sim")
+        $("img[class*='sim']").fadeOut(400)
+        document.getElementById("top_menu").style.animation = "0.4s ease-out 0s 1 teste"
+        // 0.4s ease-out 0s 1 teste
+    }
+    function focus() {
+        if ($('div').is('.ui-draggable-dragging')) {
+            // console.log("ok")
+            $("div[class*='drag-app ui-draggable']").css("zIndex", "-1");
+            $("img[class*='drag-app ui-draggable']").css("zIndex", "-1");
+            $("div[class*='drag-app ui-draggable ui-draggable-dragging']").css("zIndex", "1");
+            $("img[class*='drag-app ui-draggable ui-draggable-dragging']").css("zIndex", "1");
+        }
+        if ($('img').is('.ui-draggable-dragging')) {
+            // console.log("ok")
+            $("div[class*='drag-app ui-draggable']").css("zIndex", "-1");
+            $("img[class*='drag-app ui-draggable']").css("zIndex", "-1");
+            $("div[class*='drag-app ui-draggable ui-draggable-dragging']").css("zIndex", "1");
+            $("img[class*='drag-app ui-draggable ui-draggable-dragging']").css("zIndex", "1");
+        }
+    }
+
+    $(".icons").hover(function(){
+
+        var $principal = $(this);
+        if ($principal.position().top < 635) {
+            // $('#bottom_container').append($principal)
+            // $principal.insertBefore($('#bottom_menu'));
+            $principal.removeClass("principal")
+        }
+        var $secundario = $principal.prev();
+        var $secundario2 = $principal.next();
+        if ($principal.hasClass("sim")) {
+
+        } else {
+           $principal.addClass("principal")
+           $secundario.addClass("secundary")
+            $secundario2.addClass("secundary")
+        }
+
+
+        
+    }, function(){
+        var $principal = $(this);
+        var $secundario = $principal.prev();
+        var $secundario2 = $principal.next();
+        $principal.removeClass("principal")
+        $secundario.removeClass("secundary")
+        $secundario2.removeClass("secundary")
+    });
+
+    
+
+</script>
+<script src="apps.js"></script>

@@ -1,0 +1,21 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+#version_container {
+    width: 100%;
+    height: 20px;
+}
+h3 {
+    color: white;
+}

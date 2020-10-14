@@ -1,0 +1,77 @@
+#config {
+    height: 510px;
+    width: 595px;
+    margin: 0;
+    /* position: absolute !important; */
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    z-index: 2;
+    position: absolute;
+    align-items:center;
+    animation: 0.2s ease-out 0s 1 openconfig;
+
+}
+#store {
+    height: 600px;
+    margin: 0;
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    position: absolute;
+    align-items:center;
+    animation: 0.2s ease-out 0s 1 openstore;
+}
+#storeimg {
+    height: 600px;
+    position: absolute;
+    z-index: 2;
+    -webkit-filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    animation: 0.2s ease-out 0s 1 openstore;
+    border-radius: 7px;
+}
+@keyframes openstore {
+    0% {
+        opacity: 0;
+        height: 315px;
+        /* 355px */
+        width: 512px; 
+        /* 397.5px */
+    }
+    100% {
+        opacity: 1;
+        height: 600px;
+        width: 976.16px;
+    }
+}
+@keyframes openconfig {
+    0% {
+        opacity: 0;
+        height: 355px;
+        /* 355px */
+        width: 397.5px; 
+        /* 397.5px */
+    }
+    100% {
+        opacity: 1;
+        height: 510px;
+        width: 595px;
+    }
+}
+#apps-container {
+    width: 99%;
+    height: 90%;
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#configimg {
+    height: 510px;
+    position: absolute;
+    z-index: 2;
+    -webkit-filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.377));
+    animation: 0.2s ease-out 0s 1 openconfig;
+}
