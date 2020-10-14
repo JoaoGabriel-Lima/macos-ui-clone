@@ -14,10 +14,10 @@ function openApp(app) {
         // console.log(choose)
         switch (app) {
             case 'store':
-                document.getElementById("apps-container").innerHTML += '<div class="drag-app" id="store" onclick="focus()"><img src="/source/applestore/applestore.jpg" class="drag-app" id="storeimg"></div>'
+                document.getElementById("apps-container").innerHTML += '<div class="drag-app" id="store" onclick="focus()"><img src="source/applestore/applestore.jpg" class="drag-app" id="storeimg"></div>'
                 break;
             case 'config':
-                document.getElementById("apps-container").innerHTML += '<div class="drag-app" id="config" onclick="focus()"><img src="/source/config/systempreferences.png" id="configimg"></div>'
+                document.getElementById("apps-container").innerHTML += '<div class="drag-app" id="config" onclick="focus()"><img src="source/config/systempreferences.png" id="configimg"></div>'
                 break
         }
         
